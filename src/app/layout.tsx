@@ -24,15 +24,26 @@ export const metadata: Metadata = {
     "workflow automation",
     "AI as a service",
     "Omoha Solutions",
+    "agent ops",
   ],
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
     title: "Omoha Agent Ops | AI Agent Operations as a Service",
     description:
       "We set up, run, and optimize AI agents for your business. Automated workflows that work 24/7.",
-    url: "https://agents.omohasolutions.com",
+    url: "https://omoha-agent-ops.onrender.com",
     siteName: "Omoha Solutions",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Omoha Agent Ops | AI Agent Operations as a Service",
+    description:
+      "We set up, run, and optimize AI agents for your business. Automated workflows that work 24/7.",
+  },
+  metadataBase: new URL("https://omoha-agent-ops.onrender.com"),
 };
 
 export default function RootLayout({
