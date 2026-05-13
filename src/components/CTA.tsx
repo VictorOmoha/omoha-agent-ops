@@ -16,6 +16,7 @@ export function CTA() {
       name: data.get("name"),
       email: data.get("email"),
       company: data.get("company"),
+      workflow: data.get("workflow"),
       message: data.get("message"),
     };
 
@@ -28,7 +29,7 @@ export function CTA() {
         },
         body: JSON.stringify({
           ...payload,
-          _subject: `Agent Ops Lead: ${payload.company || payload.name}`,
+          _subject: `Agent Ops Audit: ${payload.company || payload.name}`,
           _template: "table",
           _captcha: "false",
         }),
@@ -48,22 +49,22 @@ export function CTA() {
   return (
     <section id="contact" className="py-24 px-6 border-t border-white/5 hero-gradient">
       <div className="max-w-7xl mx-auto">
-        <p className="label-mono mb-6">// GET IN TOUCH</p>
+        <p className="label-mono mb-6">{"// BOOK AN AGENT AUDIT"}</p>
 
         <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-3xl leading-tight">
-          TELL US WHAT YOUR AGENTS SHOULD DO.
+          SHOW US THE WORKFLOW THAT KEEPS SLOWING YOU DOWN.
         </h2>
 
-        <p className="mt-6 text-white/50 max-w-xl leading-relaxed">
-          Share a few details about your operations. We will respond within one
-          business day with a free workflow audit and deployment timeline.
+        <p className="mt-6 text-white/50 max-w-2xl leading-relaxed">
+          Send the messy process. We will identify where an agent can save time,
+          reduce missed follow-up, or make the handoff more reliable.
         </p>
 
         {status === "sent" ? (
           <div className="mt-12 max-w-xl border border-cyan/30 bg-cyan/5 px-6 py-8">
-            <p className="text-cyan font-semibold text-lg">Sequence received.</p>
+            <p className="text-cyan font-semibold text-lg">Audit request received.</p>
             <p className="text-white/50 mt-2 text-sm">
-              We will reach out within one business day with your workflow audit.
+              We will respond with next steps and a workflow review window.
             </p>
           </div>
         ) : (
@@ -107,20 +108,38 @@ export function CTA() {
             </div>
 
             <div>
-              <label className="label-mono block mb-2">WHAT SHOULD YOUR AGENTS HANDLE?</label>
+              <label className="label-mono block mb-2">WHAT WORKFLOW NEEDS HELP FIRST?</label>
+              <select
+                name="workflow"
+                disabled={status === "sending"}
+                className="w-full bg-card-bg border border-card-border px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan transition-colors disabled:opacity-50"
+                defaultValue=""
+              >
+                <option value="" disabled>Choose one</option>
+                <option>Lead follow-up</option>
+                <option>Client intake</option>
+                <option>Proposal drafting</option>
+                <option>Support triage</option>
+                <option>Research and reporting</option>
+                <option>Other operations workflow</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="label-mono block mb-2">DESCRIBE THE MESS</label>
               <textarea
                 name="message"
                 rows={4}
                 required
                 disabled={status === "sending"}
-                placeholder="E.g. lead follow-up, appointment scheduling, daily reporting..."
+                placeholder="Example: leads come through email and Instagram, we forget to follow up, and nobody updates the CRM..."
                 className="w-full bg-card-bg border border-card-border px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-cyan transition-colors resize-none disabled:opacity-50"
               />
             </div>
 
             {status === "error" && (
               <p className="text-red-400 text-sm">
-                Submission failed. Try again or email us directly.
+                Submission failed. Try again or email victor@omohasolutions.com directly.
               </p>
             )}
 
@@ -129,7 +148,7 @@ export function CTA() {
               disabled={status === "sending"}
               className="bg-cyan text-black font-semibold px-8 py-4 text-sm tracking-wider hover:bg-cyan/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {status === "sending" ? "TRANSMITTING..." : "SUBMIT SEQUENCE"}
+              {status === "sending" ? "SENDING..." : "BOOK AGENT AUDIT"}
             </button>
           </form>
         )}

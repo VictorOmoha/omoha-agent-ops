@@ -15,9 +15,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Omoha Agent Ops | AI Agent Setup & Operations as a Service",
+  title: "Omoha Agent Ops | Focused AI Agents for Business Workflows",
   description:
-    "We set up, run, and optimize AI agents for your business. Automated workflows that work 24/7, built and maintained by Omoha Solutions.",
+    "Omoha Solutions builds and manages focused AI agents for lead follow-up, client intake, proposal drafting, support triage, research, and repetitive admin work.",
   keywords: [
     "AI agents",
     "agent operations",
@@ -30,20 +30,20 @@ export const metadata: Metadata = {
     icon: "/favicon.svg",
   },
   openGraph: {
-    title: "Omoha Agent Ops | AI Agent Operations as a Service",
+    title: "Omoha Agent Ops | Focused AI Agents for Business Workflows",
     description:
-      "We set up, run, and optimize AI agents for your business. Automated workflows that work 24/7.",
-    url: "https://omoha-agent-ops.onrender.com",
+      "AI agents that reduce operational chaos for small teams. Lead follow-up, intake, proposals, support triage, research, and admin workflows.",
+    url: "https://agents.omohasolutions.com",
     siteName: "Omoha Solutions",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Omoha Agent Ops | AI Agent Operations as a Service",
+    title: "Omoha Agent Ops | Focused AI Agents for Business Workflows",
     description:
-      "We set up, run, and optimize AI agents for your business. Automated workflows that work 24/7.",
+      "AI agents that reduce operational chaos for small teams.",
   },
-  metadataBase: new URL("https://omoha-agent-ops.onrender.com"),
+  metadataBase: new URL("https://agents.omohasolutions.com"),
 };
 
 export default function RootLayout({

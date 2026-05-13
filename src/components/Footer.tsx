@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export function Footer() {
   return (
     <footer className="py-16 px-6 border-t border-white/5 bg-black">
@@ -11,8 +9,8 @@ export function Footer() {
               <span className="text-white font-semibold tracking-wider">AGENT OPS</span>
             </div>
             <p className="text-white/40 text-sm leading-relaxed max-w-xs">
-              AI Agent Operations as a Service. We set up, run, and optimize
-              autonomous workflows for growing businesses.
+              Focused AI agents for messy business workflows. We build, test,
+              and improve agents that reduce operational chaos.
             </p>
           </div>
 
@@ -20,8 +18,8 @@ export function Footer() {
             <h4 className="font-mono text-cyan text-xs tracking-wider mb-4">SERVICES</h4>
             <ul className="flex flex-col gap-2 text-sm">
               <li>
-                <a href="#how" className="text-white/40 hover:text-white transition-colors">
-                  How It Works
+                <a href="#agents" className="text-white/40 hover:text-white transition-colors">
+                  Example Agents
                 </a>
               </li>
               <li>
@@ -69,7 +67,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Omoha Solutions. All rights reserved.
           </p>
           <p className="text-xs text-white/30">
-            Raleigh-Durham, NC &bull; Worldwide
+            US and Nigeria &bull; Worldwide
           </p>
         </div>
       </div>

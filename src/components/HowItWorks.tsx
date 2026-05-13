@@ -2,63 +2,65 @@ export function HowItWorks() {
   const steps = [
     {
       num: "01",
-      title: "AUDIT & MAP",
+      title: "AUDIT THE WORKFLOW",
       description:
-        "We study your operations for one week. We identify the repetitive workflows, communication gaps, and bottlenecks that eat your team's time. Then we map which ones an AI agent can own end-to-end.",
+        "We inspect how leads, client requests, documents, messages, and decisions currently move through the business. The goal is to find the work that is repetitive enough for an agent and important enough to matter.",
     },
     {
       num: "02",
-      title: "BUILD & DEPLOY",
+      title: "DESIGN THE AGENT ROLE",
       description:
-        "Our team designs, builds, and deploys your agent workflows. Each one is wired to your existing tools (email, CRM, calendar, Slack, etc.) and tested against real scenarios before going live.",
+        "We define the agent's job, boundaries, inputs, outputs, escalation rules, tone, and success metric. Narrow agents are easier to trust, test, and improve.",
     },
     {
       num: "03",
-      title: "MONITOR & OPTIMIZE",
+      title: "BUILD, TEST, DEPLOY",
       description:
-        "Agents run 24/7. We monitor performance, catch errors, and continuously optimize. Monthly reports show you exactly what your agents accomplished and where we improved them.",
+        "We wire the agent to the right tools, test it against real examples, and deploy it into the workflow with a human approval path where needed.",
+    },
+    {
+      num: "04",
+      title: "MONITOR AND IMPROVE",
+      description:
+        "Agents are not set-and-forget. We review outputs, catch failures, tighten prompts, improve integrations, and add new workflows as the business matures.",
     },
   ];
 
   return (
     <section id="how" className="py-24 px-6 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
-        <p className="label-mono mb-6">// HOW IT WORKS</p>
+        <p className="label-mono mb-6">{"// PROCESS"}</p>
 
         <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-3xl leading-tight">
-          FROM CHAOS TO AUTONOMOUS OPERATIONS.
+          FROM OPERATIONAL CHAOS TO REPEATABLE SYSTEMS.
         </h2>
 
-        <div className="mt-16 flex flex-col gap-16">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10">
           {steps.map((step) => (
-            <div key={step.num} className="flex flex-col md:flex-row gap-8">
-              <div className="md:w-32 shrink-0">
-                <p className="font-mono text-cyan text-4xl font-bold">{step.num}</p>
-              </div>
-              <div className="max-w-xl">
-                <h3 className="text-xl font-bold tracking-wide mb-4">{step.title}</h3>
-                <p className="text-white/50 leading-relaxed">{step.description}</p>
-              </div>
+            <div key={step.num} className="border-t border-white/10 pt-8">
+              <p className="font-mono text-cyan text-4xl font-bold">{step.num}</p>
+              <h3 className="text-xl font-bold tracking-wide mt-6 mb-4">{step.title}</h3>
+              <p className="text-white/50 leading-relaxed">{step.description}</p>
             </div>
           ))}
         </div>
 
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-white/10 pt-12">
           <div>
-            <p className="font-mono text-cyan text-xl font-bold">Email & CRM</p>
-            <p className="text-xs text-white/40 mt-2">Lead capture, follow-ups, pipeline updates</p>
+            <p className="font-mono text-cyan text-xl font-bold">CRM</p>
+            <p className="text-xs text-white/40 mt-2">Lead capture, qualification, follow-up</p>
           </div>
           <div>
-            <p className="font-mono text-cyan text-xl font-bold">Scheduling</p>
-            <p className="text-xs text-white/40 mt-2">Appointments, reminders, calendar sync</p>
+            <p className="font-mono text-cyan text-xl font-bold">Email</p>
+            <p className="text-xs text-white/40 mt-2">Drafts, reminders, routing, summaries</p>
           </div>
           <div>
-            <p className="font-mono text-cyan text-xl font-bold">Reporting</p>
-            <p className="text-xs text-white/40 mt-2">KPI dashboards, daily digests, alerts</p>
+            <p className="font-mono text-cyan text-xl font-bold">Docs</p>
+            <p className="text-xs text-white/40 mt-2">Proposals, SOPs, reports, briefs</p>
           </div>
           <div>
-            <p className="font-mono text-cyan text-xl font-bold">Customer Comms</p>
-            <p className="text-xs text-white/40 mt-2">Onboarding, check-ins, support routing</p>
+            <p className="font-mono text-cyan text-xl font-bold">Ops</p>
+            <p className="text-xs text-white/40 mt-2">Handoffs, alerts, dashboards, checks</p>
           </div>
         </div>
       </div>

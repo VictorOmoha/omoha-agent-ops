@@ -1,50 +1,47 @@
 const plans = [
   {
-    name: "LAUNCH",
-    price: "$2,000",
-    period: "/mo",
-    description: "One automated workflow. Perfect for a single high-impact process.",
+    name: "AGENT AUDIT",
+    price: "$500",
+    period: "one-time",
+    description: "A focused workflow review for teams that know they need automation but need the right starting point.",
     features: [
-      "1 agent workflow (end-to-end)",
-      "Connected to your existing tools",
-      "Weekly performance monitoring",
-      "Monthly optimization report",
-      "Email & Slack support",
+      "45-minute workflow call",
+      "3-5 agent opportunities identified",
+      "Risk and readiness notes",
+      "Implementation roadmap",
+      "Credit applied if you build with us",
     ],
-    cta: "START LAUNCH",
+    cta: "BOOK AUDIT",
     featured: false,
   },
   {
-    name: "SCALE",
-    price: "$3,500",
-    period: "/mo",
-    description: "Three coordinated workflows. Agents that talk to each other.",
+    name: "FIRST AGENT BUILD",
+    price: "from $2,500",
+    period: "project",
+    description: "One focused AI agent built for a specific workflow, tested against real examples, and deployed with clear handoff rules.",
     features: [
-      "3 agent workflows",
-      "Cross-workflow coordination",
-      "Daily performance monitoring",
-      "Bi-weekly optimization sessions",
-      "Priority support (4hr response)",
-      "Custom agent personality & tone",
+      "1 narrow agent role",
+      "Workflow design and prompt system",
+      "Tool or inbox integration where needed",
+      "Testing against real scenarios",
+      "Launch documentation and handoff",
     ],
-    cta: "START SCALE",
+    cta: "BUILD FIRST AGENT",
     featured: true,
   },
   {
-    name: "COMMAND",
-    price: "$5,000",
+    name: "MANAGED AGENT OPS",
+    price: "$2,000+",
     period: "/mo",
-    description: "Five workflows. Full operations layer. Your AI back-office.",
+    description: "Ongoing agent operations for businesses ready to automate multiple workflows and keep improving them monthly.",
     features: [
-      "5 agent workflows",
-      "Full cross-coordination matrix",
-      "Real-time monitoring & alerts",
-      "Weekly optimization & strategy calls",
-      "Dedicated ops engineer",
-      "Custom agent personalities",
-      "API integrations built to spec",
+      "1-5 managed agent workflows",
+      "Monitoring and performance reviews",
+      "Prompt and workflow optimization",
+      "New automation improvements monthly",
+      "Priority support and reporting",
     ],
-    cta: "START COMMAND",
+    cta: "START RETAINER",
     featured: false,
   },
 ];
@@ -53,15 +50,15 @@ export function Pricing() {
   return (
     <section id="pricing" className="py-24 px-6 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
-        <p className="label-mono mb-6">// PRICING</p>
+        <p className="label-mono mb-6">{"// ENGAGEMENT OPTIONS"}</p>
 
         <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-3xl leading-tight">
-          AGENT OPERATIONS, FIXED PRICE.
+          START WITH THE RIGHT LEVEL OF COMMITMENT.
         </h2>
 
-        <p className="mt-6 text-white/50 max-w-xl leading-relaxed">
-          No hourly billing. No scope creep surprises. You pay a flat monthly
-          retainer and we own the outcome.
+        <p className="mt-6 text-white/50 max-w-2xl leading-relaxed">
+          Some teams need a roadmap first. Some need their first agent. Some need a
+          managed agent operations layer. We can meet the business where it is.
         </p>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -74,13 +71,13 @@ export function Pricing() {
             >
               {plan.featured && (
                 <p className="font-mono text-cyan text-xs tracking-wider mb-4">
-                  // RECOMMENDED
+                  {"// BEST FIRST BUILD"}
                 </p>
               )}
 
               <h3 className="text-lg font-bold tracking-wider">{plan.name}</h3>
 
-              <div className="mt-4 flex items-baseline gap-1">
+              <div className="mt-4 flex items-baseline gap-2 flex-wrap">
                 <span className="text-3xl font-extrabold">{plan.price}</span>
                 <span className="text-white/40 text-sm">{plan.period}</span>
               </div>

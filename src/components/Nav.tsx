@@ -10,8 +10,11 @@ export function Nav() {
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
+          <a href="#agents" className="text-sm text-white/60 hover:text-white transition-colors tracking-wide">
+            AGENTS
+          </a>
           <a href="#how" className="text-sm text-white/60 hover:text-white transition-colors tracking-wide">
-            HOW IT WORKS
+            PROCESS
           </a>
           <a href="#pricing" className="text-sm text-white/60 hover:text-white transition-colors tracking-wide">
             PRICING
@@ -25,7 +28,7 @@ export function Nav() {
           href="#contact"
           className="text-sm font-medium tracking-wider border border-white/20 px-5 py-2 hover:bg-white hover:text-black transition-all"
         >
-          START OPERATIONS
+          BOOK AUDIT
         </a>
       </div>
     </nav>
