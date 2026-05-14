@@ -22,10 +22,10 @@ export function Hero() {
             BOOK AN AGENT AUDIT
           </a>
           <a
-            href="#agents"
+            href="#demo-videos"
             className="inline-block border border-white/20 text-white font-medium px-8 py-4 text-sm tracking-wider hover:bg-white/5 transition-all text-center"
           >
-            SEE EXAMPLE AGENTS
+            WATCH DEMO VIDEOS
           </a>
         </div>
 
