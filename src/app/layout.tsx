@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Hanken_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const hanken = Hanken_Grotesk({
   variable: "--font-geist-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
@@ -11,13 +11,13 @@ const inter = Inter({
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
   title: "Omoha Agent Ops | Focused AI Agents for Business Workflows",
   description:
-    "Omoha Solutions builds and manages focused AI agents for lead follow-up, client intake, proposal drafting, support triage, research, and repetitive admin work.",
+    "Omoha Solutions builds focused AI agents that turn messy lead follow-up, intake, proposal, support, research, and admin workflows into owned systems.",
   keywords: [
     "AI agents",
     "agent operations",
@@ -30,18 +30,29 @@ export const metadata: Metadata = {
     icon: "/favicon.svg",
   },
   openGraph: {
-    title: "Omoha Agent Ops | Focused AI Agents for Business Workflows",
+    title: "Omoha Agent Ops | Agents That Turn Messy Workflows Into Owned Systems",
     description:
-      "AI agents that reduce operational chaos for small teams. Lead follow-up, intake, proposals, support triage, research, and admin workflows.",
+      "Focused AI agents for lead follow-up, client intake, proposals, support triage, research, and repetitive admin work.",
     url: "https://agents.omohasolutions.com",
-    siteName: "Omoha Solutions",
+    siteName: "Omoha Agent Ops",
     type: "website",
+    images: [
+      {
+        url: "/agent-og.svg",
+        width: 1200,
+        height: 630,
+        alt: "Omoha Agent Ops - focused AI agents for messy business workflows",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Omoha Agent Ops | Focused AI Agents for Business Workflows",
-    description:
-      "AI agents that reduce operational chaos for small teams.",
+    title: "Omoha Agent Ops | Focused AI Agents",
+    description: "Agents that turn messy workflows into owned systems.",
+    images: ["/agent-og.svg"],
+  },
+  alternates: {
+    canonical: "https://agents.omohasolutions.com",
   },
   metadataBase: new URL("https://agents.omohasolutions.com"),
 };
@@ -52,13 +63,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-black text-white">
-        {children}
-      </body>
+    <html lang="en" className={`${hanken.variable} ${jetbrainsMono.variable} h-full antialiased`}>
+      <body>{children}</body>
     </html>
   );
 }

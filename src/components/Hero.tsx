@@ -1,46 +1,88 @@
 export function Hero() {
   return (
-    <section className="hero-gradient relative pt-32 pb-24 px-6">
-      <div className="max-w-7xl mx-auto">
-        <p className="label-mono mb-6">{"// AI AGENTS FOR BUSINESS OPERATIONS"}</p>
+    <section className="hero">
+      <div className="container hero-grid">
+        <div className="hero-copy">
+          <p className="kicker">{"// AI AGENTS FOR BUSINESS OPERATIONS"}</p>
 
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] max-w-5xl">
-          FOCUSED AI AGENTS FOR MESSY BUSINESS WORKFLOWS.
-        </h1>
+          <h1 className="display-1" style={{ marginTop: 24 }}>
+            Agents that turn messy workflows into owned systems.
+          </h1>
 
-        <p className="mt-8 text-lg md:text-xl text-white/60 max-w-3xl leading-relaxed">
-          Omoha Solutions builds and manages AI agents that handle lead follow-up,
-          client intake, proposal drafting, support triage, research, and repetitive
-          admin work without adding more software clutter.
-        </p>
+          <p className="lead">
+            Omoha Solutions designs, builds, and manages focused AI agents for lead
+            follow-up, client intake, proposal drafting, support triage, research,
+            and repetitive admin work. One agent. One job. Clear human control.
+          </p>
 
-        <div className="mt-12 flex flex-col sm:flex-row gap-4">
-          <a
-            href="#contact"
-            className="inline-block bg-cyan text-black font-semibold px-8 py-4 text-sm tracking-wider hover:bg-cyan/90 transition-all text-center"
-          >
-            BOOK AN AGENT AUDIT
-          </a>
-          <a
-            href="#demo-videos"
-            className="inline-block border border-white/20 text-white font-medium px-8 py-4 text-sm tracking-wider hover:bg-white/5 transition-all text-center"
-          >
-            WATCH DEMO VIDEOS
-          </a>
+          <div className="btn-row">
+            <a href="#contact" className="btn btn-primary">
+              BOOK AN AGENT AUDIT
+            </a>
+            <a href="#demo-videos" className="btn btn-ghost">
+              WATCH DEMOS
+            </a>
+          </div>
+
+          <div className="hero-stats">
+            <div className="hero-stat">
+              <strong>1 job</strong>
+              <span>PER AGENT</span>
+            </div>
+            <div className="hero-stat">
+              <strong>7-14d</strong>
+              <span>FIRST BUILD WINDOW</span>
+            </div>
+            <div className="hero-stat">
+              <strong>Human</strong>
+              <span>APPROVAL WHERE IT MATTERS</span>
+            </div>
+          </div>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl border-t border-white/10 pt-8">
-          <div>
-            <p className="font-mono text-cyan text-2xl font-bold">1 job</p>
-            <p className="text-xs text-white/40 mt-1 tracking-wider">PER AGENT</p>
+        <div className="agent-console" aria-label="Agent workflow visualization">
+          <div className="console-top">
+            <span className="console-dot" />
+            <span className="console-dot" />
+            <span className="console-dot" />
+            <span className="console-name">agent-loop.sh</span>
           </div>
-          <div>
-            <p className="font-mono text-cyan text-2xl font-bold">7-14d</p>
-            <p className="text-xs text-white/40 mt-1 tracking-wider">FIRST BUILD WINDOW</p>
-          </div>
-          <div>
-            <p className="font-mono text-cyan text-2xl font-bold">Managed</p>
-            <p className="text-xs text-white/40 mt-1 tracking-wider">BUILD, TEST, IMPROVE</p>
+          <div className="agent-loop">
+            <div className="loop-card">
+              <div className="loop-head">
+                <span className="loop-title">Inbound signal</span>
+                <span className="loop-status">CAPTURED</span>
+              </div>
+              <p className="loop-body">
+                New inquiry arrives from email, site form, CRM, or inbox. The agent
+                extracts context, source, urgency, and missing details.
+              </p>
+              <div className="signal-bar"><span style={{ width: "42%" }} /></div>
+            </div>
+
+            <div className="loop-card">
+              <div className="loop-head">
+                <span className="loop-title">Decision draft</span>
+                <span className="loop-status">READY</span>
+              </div>
+              <p className="loop-body">
+                Agent scores fit, prepares a reply, updates the tracker, and flags
+                the next action for approval instead of acting blindly.
+              </p>
+              <div className="signal-bar"><span style={{ width: "74%" }} /></div>
+            </div>
+
+            <div className="loop-card">
+              <div className="loop-head">
+                <span className="loop-title">Human handoff</span>
+                <span className="loop-status">CONTROLLED</span>
+              </div>
+              <p className="loop-body">
+                Your team sees what happened, why it happened, and what should be
+                sent, scheduled, escalated, or improved next.
+              </p>
+              <div className="signal-bar"><span style={{ width: "91%" }} /></div>
+            </div>
           </div>
         </div>
       </div>

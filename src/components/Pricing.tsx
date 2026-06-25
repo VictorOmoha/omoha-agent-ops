@@ -1,6 +1,6 @@
 const plans = [
   {
-    name: "AGENT AUDIT",
+    name: "Agent Audit",
     price: "$500",
     period: "one-time",
     description: "A focused workflow review for teams that know they need automation but need the right starting point.",
@@ -15,7 +15,7 @@ const plans = [
     featured: false,
   },
   {
-    name: "FIRST AGENT BUILD",
+    name: "First Agent Build",
     price: "from $2,500",
     period: "project",
     description: "One focused AI agent built for a specific workflow, tested against real examples, and deployed with clear handoff rules.",
@@ -30,7 +30,7 @@ const plans = [
     featured: true,
   },
   {
-    name: "MANAGED AGENT OPS",
+    name: "Managed Agent Ops",
     price: "$2,000+",
     period: "/mo",
     description: "Ongoing agent operations for businesses ready to automate multiple workflows and keep improving them monthly.",
@@ -48,64 +48,34 @@ const plans = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-24 px-6 border-t border-white/5">
-      <div className="max-w-7xl mx-auto">
-        <p className="label-mono mb-6">{"// ENGAGEMENT OPTIONS"}</p>
-
-        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-3xl leading-tight">
-          START WITH THE RIGHT LEVEL OF COMMITMENT.
+    <section id="pricing" className="section-tight">
+      <div className="container">
+        <p className="kicker">{"// ENGAGEMENT OPTIONS"}</p>
+        <h2 className="display-2" style={{ marginTop: 22, maxWidth: 780 }}>
+          Start with the right level of commitment.
         </h2>
-
-        <p className="mt-6 text-white/50 max-w-2xl leading-relaxed">
+        <p className="lead-sm" style={{ marginTop: 24, maxWidth: 680 }}>
           Some teams need a roadmap first. Some need their first agent. Some need a
-          managed agent operations layer. We can meet the business where it is.
+          managed agent operations layer. We meet the business where it is.
         </p>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="card-grid grid-3" style={{ marginTop: 58 }}>
           {plans.map((plan) => (
-            <div
-              key={plan.name}
-              className={`pricing-card p-8 bg-card-bg flex flex-col ${
-                plan.featured ? "featured glow-cyan" : ""
-              }`}
-            >
-              {plan.featured && (
-                <p className="font-mono text-cyan text-xs tracking-wider mb-4">
-                  {"// BEST FIRST BUILD"}
-                </p>
-              )}
-
-              <h3 className="text-lg font-bold tracking-wider">{plan.name}</h3>
-
-              <div className="mt-4 flex items-baseline gap-2 flex-wrap">
-                <span className="text-3xl font-extrabold">{plan.price}</span>
-                <span className="text-white/40 text-sm">{plan.period}</span>
+            <article key={plan.name} className={`price-card ${plan.featured ? "featured" : ""}`}>
+              {plan.featured && <p className="kicker">{"// BEST FIRST BUILD"}</p>}
+              <h3 className="card-title" style={{ marginTop: plan.featured ? 18 : 0 }}>{plan.name}</h3>
+              <div className="price">
+                <strong>{plan.price}</strong>
+                <span>{plan.period}</span>
               </div>
-
-              <p className="mt-4 text-sm text-white/50 leading-relaxed">
-                {plan.description}
-              </p>
-
-              <ul className="mt-8 flex flex-col gap-3 flex-1">
-                {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3 text-sm">
-                    <span className="text-cyan mt-0.5">&#x25B8;</span>
-                    <span className="text-white/70">{feature}</span>
-                  </li>
-                ))}
+              <p className="card-body">{plan.description}</p>
+              <ul className="feature-list">
+                {plan.features.map((feature) => <li key={feature}>{feature}</li>)}
               </ul>
-
-              <a
-                href="#contact"
-                className={`mt-8 block text-center text-sm font-semibold tracking-wider py-4 transition-all ${
-                  plan.featured
-                    ? "bg-cyan text-black hover:bg-cyan/90"
-                    : "border border-white/20 text-white hover:bg-white/5"
-                }`}
-              >
+              <a href="#contact" className={`btn ${plan.featured ? "btn-primary" : "btn-ghost"}`}>
                 {plan.cta}
               </a>
-            </div>
+            </article>
           ))}
         </div>
       </div>

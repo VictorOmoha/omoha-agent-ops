@@ -23,10 +23,7 @@ export function CTA() {
     try {
       const res = await fetch("https://formsubmit.co/ajax/victor@omohasolutions.com", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           ...payload,
           _subject: `Agent Ops Audit: ${payload.company || payload.name}`,
@@ -35,7 +32,8 @@ export function CTA() {
         }),
       });
 
-      if (res.ok) {
+      const result = await res.json().catch(() => ({}));
+      if (res.ok && result.success !== "false" && result.success !== false) {
         setStatus("sent");
         form.reset();
       } else {
@@ -47,74 +45,62 @@ export function CTA() {
   }
 
   return (
-    <section id="contact" className="py-24 px-6 border-t border-white/5 hero-gradient">
-      <div className="max-w-7xl mx-auto">
-        <p className="label-mono mb-6">{"// BOOK AN AGENT AUDIT"}</p>
+    <section id="contact" className="section">
+      <div className="container contact-grid">
+        <div>
+          <p className="kicker">{"// BOOK AN AGENT AUDIT"}</p>
+          <h2 className="display-2" style={{ marginTop: 22 }}>
+            Show us the workflow that keeps slowing you down.
+          </h2>
+          <p className="lead-sm" style={{ marginTop: 26, maxWidth: 520 }}>
+            Send the messy process. We will identify where an agent can save time,
+            reduce missed follow-up, or make the handoff more reliable.
+          </p>
 
-        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-3xl leading-tight">
-          SHOW US THE WORKFLOW THAT KEEPS SLOWING YOU DOWN.
-        </h2>
-
-        <p className="mt-6 text-white/50 max-w-2xl leading-relaxed">
-          Send the messy process. We will identify where an agent can save time,
-          reduce missed follow-up, or make the handoff more reliable.
-        </p>
+          <div className="contact-meta">
+            <div>
+              <div className="k">EMAIL</div>
+              <a href="mailto:victor@omohasolutions.com" className="v">
+                victor@omohasolutions.com
+              </a>
+            </div>
+            <div>
+              <div className="k">PHONE</div>
+              <a href="tel:+19194558642" className="v">
+                (919) 455-8642
+              </a>
+            </div>
+          </div>
+        </div>
 
         {status === "sent" ? (
-          <div className="mt-12 max-w-xl border border-cyan/30 bg-cyan/5 px-6 py-8">
-            <p className="text-cyan font-semibold text-lg">Audit request received.</p>
-            <p className="text-white/50 mt-2 text-sm">
+          <div className="audit-form">
+            <p className="kicker">REQUEST RECEIVED</p>
+            <h3 className="display-3">We have your audit request.</h3>
+            <p className="lead-sm">
               We will respond with next steps and a workflow review window.
             </p>
           </div>
         ) : (
-          <form
-            onSubmit={handleSubmit}
-            className="mt-12 max-w-xl flex flex-col gap-6"
-          >
-            <div>
-              <label className="label-mono block mb-2">NAME</label>
-              <input
-                type="text"
-                name="name"
-                required
-                disabled={status === "sending"}
-                placeholder="Your name"
-                className="w-full bg-card-bg border border-card-border px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-cyan transition-colors disabled:opacity-50"
-              />
+          <form onSubmit={handleSubmit} className="audit-form">
+            <div className="field">
+              <label htmlFor="agent-audit-name">NAME</label>
+              <input id="agent-audit-name" type="text" name="name" required disabled={status === "sending"} placeholder="Your name" />
             </div>
 
-            <div>
-              <label className="label-mono block mb-2">EMAIL</label>
-              <input
-                type="email"
-                name="email"
-                required
-                disabled={status === "sending"}
-                placeholder="you@company.com"
-                className="w-full bg-card-bg border border-card-border px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-cyan transition-colors disabled:opacity-50"
-              />
+            <div className="field">
+              <label htmlFor="agent-audit-email">EMAIL</label>
+              <input id="agent-audit-email" type="email" name="email" required disabled={status === "sending"} placeholder="you@company.com" />
             </div>
 
-            <div>
-              <label className="label-mono block mb-2">COMPANY</label>
-              <input
-                type="text"
-                name="company"
-                disabled={status === "sending"}
-                placeholder="Company name"
-                className="w-full bg-card-bg border border-card-border px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-cyan transition-colors disabled:opacity-50"
-              />
+            <div className="field">
+              <label htmlFor="agent-audit-company">COMPANY</label>
+              <input id="agent-audit-company" type="text" name="company" disabled={status === "sending"} placeholder="Company name" />
             </div>
 
-            <div>
-              <label className="label-mono block mb-2">WHAT WORKFLOW NEEDS HELP FIRST?</label>
-              <select
-                name="workflow"
-                disabled={status === "sending"}
-                className="w-full bg-card-bg border border-card-border px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan transition-colors disabled:opacity-50"
-                defaultValue=""
-              >
+            <div className="field">
+              <label htmlFor="agent-audit-workflow">WHAT WORKFLOW NEEDS HELP FIRST?</label>
+              <select id="agent-audit-workflow" name="workflow" disabled={status === "sending"} defaultValue="">
                 <option value="" disabled>Choose one</option>
                 <option>Lead follow-up</option>
                 <option>Client intake</option>
@@ -125,48 +111,31 @@ export function CTA() {
               </select>
             </div>
 
-            <div>
-              <label className="label-mono block mb-2">DESCRIBE THE MESS</label>
+            <div className="field">
+              <label htmlFor="agent-audit-message">DESCRIBE THE MESS</label>
               <textarea
+                id="agent-audit-message"
                 name="message"
-                rows={4}
+                rows={5}
                 required
                 disabled={status === "sending"}
                 placeholder="Example: leads come through email and Instagram, we forget to follow up, and nobody updates the CRM..."
-                className="w-full bg-card-bg border border-card-border px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-cyan transition-colors resize-none disabled:opacity-50"
               />
             </div>
 
-            {status === "error" && (
-              <p className="text-red-400 text-sm">
+            {status === "error" ? (
+              <p className="form-status error">
                 Submission failed. Try again or email victor@omohasolutions.com directly.
               </p>
+            ) : (
+              <p className="form-status">We reply within one business day.</p>
             )}
 
-            <button
-              type="submit"
-              disabled={status === "sending"}
-              className="bg-cyan text-black font-semibold px-8 py-4 text-sm tracking-wider hover:bg-cyan/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-            >
+            <button type="submit" disabled={status === "sending"} className="btn btn-primary" style={{ width: "100%" }}>
               {status === "sending" ? "SENDING..." : "BOOK AGENT AUDIT"}
             </button>
           </form>
         )}
-
-        <div className="mt-16 flex flex-col sm:flex-row gap-8 text-sm text-white/40">
-          <div>
-            <p className="font-mono text-cyan text-xs mb-1">EMAIL</p>
-            <a href="mailto:victor@omohasolutions.com" className="hover:text-white transition-colors">
-              victor@omohasolutions.com
-            </a>
-          </div>
-          <div>
-            <p className="font-mono text-cyan text-xs mb-1">PHONE</p>
-            <a href="tel:+19194558642" className="hover:text-white transition-colors">
-              (919) 455-8642
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );

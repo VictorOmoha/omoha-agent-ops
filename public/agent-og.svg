@@ -1,0 +1,23 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#08080C"/>
+  <circle cx="870" cy="120" r="300" fill="#5A54E8" fill-opacity="0.18"/>
+  <circle cx="210" cy="250" r="260" fill="#34D399" fill-opacity="0.08"/>
+  <path d="M0 500H1200" stroke="white" stroke-opacity="0.08"/>
+  <g opacity="0.9">
+    <path d="M92 78H148V134H92V78Z" fill="url(#grid)"/>
+    <text x="170" y="116" fill="#F3F4F7" font-family="JetBrains Mono, monospace" font-size="24" font-weight="700" letter-spacing="5">OMOHA AGENT OPS</text>
+  </g>
+  <text x="92" y="222" fill="#8A8AFF" font-family="JetBrains Mono, monospace" font-size="22" letter-spacing="5">// FOCUSED AI AGENTS</text>
+  <text x="92" y="318" fill="#F3F4F7" font-family="Arial, sans-serif" font-size="76" font-weight="800" letter-spacing="-5">Turn messy workflows</text>
+  <text x="92" y="402" fill="#F3F4F7" font-family="Arial, sans-serif" font-size="76" font-weight="800" letter-spacing="-5">into owned systems.</text>
+  <text x="96" y="490" fill="#A8ABB8" font-family="Arial, sans-serif" font-size="30">Lead follow-up • Intake • Proposals • Support triage</text>
+  <rect x="846" y="280" width="248" height="142" fill="#11111A" stroke="white" stroke-opacity="0.1"/>
+  <text x="878" y="330" fill="#34D399" font-family="JetBrains Mono, monospace" font-size="18" font-weight="700">CAPTURED</text>
+  <text x="878" y="372" fill="#F3F4F7" font-family="Arial, sans-serif" font-size="28" font-weight="700">Human approved</text>
+  <text x="878" y="404" fill="#8A8D98" font-family="JetBrains Mono, monospace" font-size="16">agent loop</text>
+  <defs>
+    <pattern id="grid" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="5" height="5" fill="#F3F4F7"/>
+    </pattern>
+  </defs>
+</svg>

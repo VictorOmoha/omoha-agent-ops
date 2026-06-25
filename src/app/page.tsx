@@ -10,7 +10,7 @@ import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <>
+    <div className="page-shell">
       <Nav />
       <main>
         <Hero />
@@ -22,6 +22,6 @@ export default function Home() {
         <CTA />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
