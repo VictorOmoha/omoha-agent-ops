@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     "agent ops",
   ],
   icons: {
-    icon: "/favicon.svg",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.png", type: "image/png", sizes: "64x64" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     title: "Omoha Agent Ops | Agents That Turn Messy Workflows Into Owned Systems",
@@ -38,7 +42,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/agent-og.svg",
+        url: "/agent-og.png",
         width: 1200,
         height: 630,
         alt: "Omoha Agent Ops - focused AI agents for messy business workflows",
@@ -49,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Omoha Agent Ops | Focused AI Agents",
     description: "Agents that turn messy workflows into owned systems.",
-    images: ["/agent-og.svg"],
+    images: ["/agent-og.png"],
   },
   alternates: {
     canonical: "https://agents.omohasolutions.com",

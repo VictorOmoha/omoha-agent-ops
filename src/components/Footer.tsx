@@ -4,7 +4,7 @@ export function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div>
-            <div className="footer-brand">OMOHA AGENT OPS</div>
+            <div className="footer-brand">OMOHA SOLUTIONS // AGENT OPS</div>
             <p style={{ marginTop: 18, maxWidth: 380 }}>
               Focused AI agents for messy business workflows. We build, test,
               and improve agents that reduce operational chaos for small teams.
