@@ -186,10 +186,14 @@ button, input, select, textarea { font: inherit; }
 .video-card { overflow: hidden; }
 .video-frame { position: relative; border-bottom: 1px solid var(--border); background: #050507; }
 .video-frame video { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+.guide-preview { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; display: block; transition: transform .25s ease, opacity .25s ease; }
+.video-frame a:hover .guide-preview { transform: scale(1.015); opacity: .9; }
 .video-duration { position: absolute; top: 14px; right: 14px; background: rgba(8,8,12,.82); border: 1px solid var(--border); padding: 6px 10px; font-family: var(--mono); font-size: 10px; letter-spacing: 2px; color: var(--muted-2); }
 .video-body { padding: 26px; }
 .video-body h3 { font-size: 17px; font-weight: 800; }
 .mini-label { font-family: var(--mono); font-size: 10px; letter-spacing: 2px; color: var(--accent-soft); }
+.demo-link { display: inline-flex; margin-top: 24px; font-family: var(--mono); font-size: 11px; font-weight: 800; letter-spacing: 2px; color: var(--fg); border-bottom: 1px solid var(--accent-soft); padding-bottom: 6px; }
+.demo-link:hover { color: var(--accent-soft); }
 
 .process-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; align-items: start; }
 .process-list { display: grid; gap: 18px; }
