@@ -10,9 +10,9 @@ export function Hero() {
           </h1>
 
           <p className="lead">
-            Omoha Solutions designs, builds, and manages focused AI agents for lead
-            follow-up, client intake, proposal drafting, support triage, research,
-            and repetitive admin work. One agent. One job. Clear human control.
+            Omoha Solutions designs, builds, and manages focused AI workflows like
+            Follow-Up Agent for lead recovery and Runbook for controlled quote ops.
+            One system. One job. Clear human control.
           </p>
 
           <div className="btn-row">

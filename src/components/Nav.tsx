@@ -12,7 +12,7 @@ export function Nav() {
         </Link>
 
         <div className="nav-links">
-          <a href="#agents">AGENTS</a>
+          <a href="#product-offers">OFFERS</a>
           <a href="#demo-videos">PROOF</a>
           <a href="#how">PROCESS</a>
           <a href="#pricing">PRICING</a>

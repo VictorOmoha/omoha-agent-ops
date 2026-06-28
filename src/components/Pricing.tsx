@@ -1,32 +1,32 @@
 const plans = [
   {
-    name: "Agent Audit",
-    price: "$500",
-    period: "one-time",
-    description: "A focused workflow review for teams that know they need automation but need the right starting point.",
+    name: "Follow-Up Agent Pilot",
+    price: "$750-$1,500",
+    period: "setup",
+    description: "A lead recovery system for service businesses that need faster response, owner approval, and consistent follow-up.",
     features: [
-      "45-minute workflow call",
-      "3-5 agent opportunities identified",
-      "Risk and readiness notes",
-      "Implementation roadmap",
-      "Credit applied if you build with us",
+      "Lead capture workflow",
+      "AI-drafted replies in approval mode",
+      "Follow-up reminders and owner handoff",
+      "$300-$750/mo support after setup",
+      "Best first offer for local service teams",
     ],
-    cta: "BOOK AUDIT",
+    cta: "PILOT FOLLOW-UP",
     featured: false,
   },
   {
-    name: "First Agent Build",
-    price: "from $2,500",
-    period: "project",
-    description: "One focused AI agent built for a specific workflow, tested against real examples, and deployed with clear handoff rules.",
+    name: "Runbook Quote Ops",
+    price: "$2,500-$7,500",
+    period: "pilot",
+    description: "A controlled quoting workflow for teams that turn messy inbound requests into reviewed draft quotes.",
     features: [
-      "1 narrow agent role",
-      "Workflow design and prompt system",
-      "Tool or inbox integration where needed",
-      "Testing against real scenarios",
-      "Launch documentation and handoff",
+      "Intake-to-draft quote workflow",
+      "Catalog/SKU and pricing rule mapping",
+      "Risk flags, approval gates, and audit trail",
+      "Simulated or controlled send path",
+      "Best for distributors and quote-heavy teams",
     ],
-    cta: "BUILD FIRST AGENT",
+    cta: "SCOPE RUNBOOK",
     featured: true,
   },
   {
@@ -52,11 +52,10 @@ export function Pricing() {
       <div className="container">
         <p className="kicker">{"// ENGAGEMENT OPTIONS"}</p>
         <h2 className="display-2" style={{ marginTop: 22, maxWidth: 780 }}>
-          Start with the right level of commitment.
+          Start with the system that matches the leak.
         </h2>
         <p className="lead-sm" style={{ marginTop: 24, maxWidth: 680 }}>
-          Some teams need a roadmap first. Some need their first agent. Some need a
-          managed agent operations layer. We meet the business where it is.
+          Follow-Up Agent is for missed lead response. Runbook is for quote-control workflows. Managed Agent Ops is for teams ready to keep improving multiple workflows monthly.
         </p>
 
         <div className="card-grid grid-3" style={{ marginTop: 58 }}>
