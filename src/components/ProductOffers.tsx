@@ -14,7 +14,8 @@ const offers = [
       "Keeps the owner in approval mode before automation",
       "Schedules follow-up and flags human handoff moments",
     ],
-    price: "$750-$1,500 setup · $300-$750/mo pilot",
+    price: "$1,000 setup · $500/mo",
+    note: "Fixed price. Cancel anytime. Founding-client rate for the first 5 businesses.",
     cta: "PILOT A FOLLOW-UP AGENT",
   },
   {
@@ -30,7 +31,8 @@ const offers = [
       "Flags risky terms, weak matches, and unknown recipients",
       "Routes every side effect through human approval and audit",
     ],
-    price: "$2,500-$7,500 pilot · $500-$2,000+/mo support",
+    price: "$5,000 pilot · $1,000/mo support",
+    note: "Fixed-scope 30-day pilot: one quote workflow, one pricing rule set.",
     cta: "SCOPE A QUOTE RUNBOOK",
   },
 ];
@@ -73,6 +75,7 @@ export function ProductOffers() {
                   {offer.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
                 </ul>
                 <div className="offer-price">{offer.price}</div>
+                <p className="offer-buyer">{offer.note}</p>
                 <a href="#contact" className="btn btn-primary">{offer.cta}</a>
               </div>
             </article>

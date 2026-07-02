@@ -1,14 +1,15 @@
 const plans = [
   {
     name: "Follow-Up Agent Pilot",
-    price: "$750-$1,500",
+    price: "$1,000",
     period: "setup",
     description: "A lead recovery system for service businesses that need faster response, owner approval, and consistent follow-up.",
     features: [
       "Lead capture workflow",
       "AI-drafted replies in approval mode",
       "Follow-up reminders and owner handoff",
-      "$300-$750/mo support after setup",
+      "$500/mo support after setup",
+      "Fixed price. Cancel anytime. Founding-client rate for the first 5 businesses.",
       "Best first offer for local service teams",
     ],
     cta: "PILOT FOLLOW-UP",
@@ -16,30 +17,48 @@ const plans = [
   },
   {
     name: "Runbook Quote Ops",
-    price: "$2,500-$7,500",
+    price: "$5,000",
     period: "pilot",
     description: "A controlled quoting workflow for teams that turn messy inbound requests into reviewed draft quotes.",
     features: [
+      "Fixed-scope 30-day pilot: one quote workflow, one pricing rule set",
       "Intake-to-draft quote workflow",
       "Catalog/SKU and pricing rule mapping",
       "Risk flags, approval gates, and audit trail",
       "Simulated or controlled send path",
+      "$1,000/mo support after pilot",
       "Best for distributors and quote-heavy teams",
     ],
     cta: "SCOPE RUNBOOK",
     featured: true,
   },
   {
-    name: "Managed Agent Ops",
-    price: "$2,000+",
+    name: "Agent Ops Core",
+    price: "$2,000",
     period: "/mo",
     description: "Ongoing agent operations for businesses ready to automate multiple workflows and keep improving them monthly.",
     features: [
-      "1-5 managed agent workflows",
+      "Up to 2 managed agent workflows",
+      "Monitoring and performance reviews",
+      "Prompt and workflow optimization",
+      "New automation improvements monthly",
+      "3-month minimum, monthly after",
+    ],
+    cta: "START RETAINER",
+    featured: false,
+  },
+  {
+    name: "Agent Ops Scale",
+    price: "$3,500",
+    period: "/mo",
+    description: "Ongoing agent operations for businesses ready to automate multiple workflows and keep improving them monthly.",
+    features: [
+      "Up to 5 managed agent workflows",
       "Monitoring and performance reviews",
       "Prompt and workflow optimization",
       "New automation improvements monthly",
       "Priority support and reporting",
+      "3-month minimum, monthly after",
     ],
     cta: "START RETAINER",
     featured: false,
@@ -58,7 +77,7 @@ export function Pricing() {
           Follow-Up Agent is for missed lead response. Runbook is for quote-control workflows. Managed Agent Ops is for teams ready to keep improving multiple workflows monthly.
         </p>
 
-        <div className="card-grid grid-3" style={{ marginTop: 58 }}>
+        <div className="card-grid grid-2" style={{ marginTop: 58 }}>
           {plans.map((plan) => (
             <article key={plan.name} className={`price-card ${plan.featured ? "featured" : ""}`}>
               {plan.featured && <p className="kicker">{"// BEST FIRST BUILD"}</p>}

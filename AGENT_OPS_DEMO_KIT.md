@@ -372,8 +372,8 @@ First Agent Build: typically 2-4 weeks depending on integrations.
 
 Investment recommendation:
 Agent Audit: $500 one-time.
-First Agent Build: from $2,500.
-Managed Agent Ops: from $2,000/month if ongoing monitoring and improvements are needed.
+First Agent Build: $2,500.
+Managed Agent Ops: Agent Ops Core at $2,000/month (up to 2 managed workflows) or Agent Ops Scale at $3,500/month (up to 5 managed workflows) if ongoing monitoring and improvements are needed. 3-month minimum, monthly after.
 
 Next step:
 Book the Agent Audit and send current intake/follow-up examples before the session.
@@ -391,8 +391,8 @@ If the audit confirms the workflow, the first build would focus on organizing ne
 
 Investment:
 - Agent Audit: $500 one-time
-- First Agent Build: from $2,500
-- Managed Agent Ops: from $2,000/month if you want ongoing monitoring and improvement
+- First Agent Build: $2,500
+- Managed Agent Ops: Agent Ops Core at $2,000/month (up to 2 managed workflows) or Agent Ops Scale at $3,500/month (up to 5 managed workflows). 3-month minimum, monthly after.
 
 You can book the Agent Audit here:
 https://agents.omohasolutions.com
